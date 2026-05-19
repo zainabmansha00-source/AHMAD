@@ -1,0 +1,32 @@
+{
+  "name": "AHMAD-MD",
+  "description": "Javascript WhatsApp bot made by AHMADTech",
+  "logo": "https://files.catbox.moe/0eylom.jpg",
+  "keywords": ["AHMAD-BOT"],
+  "success_url": "/",
+  "stack": "container",
+  
+  "env": {
+    "MONGODB_URL": {
+      "description": "MongoDB connection string for database storage",
+      "required": false
+    },
+    "DB_NAME": {
+      "description": "Database name for MongoDB (default: jawadmd-x10)",
+      "required": false,
+      "value": "jawadmd-x10"
+    },
+    "PORT": {
+      "description": "Port number for the server",
+      "required": false,
+      "value": "8000"
+    }
+  },
+
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+    }
+  ],
+  "stack": "heroku-24"
+}
